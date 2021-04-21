@@ -56,10 +56,11 @@
 
             </div>
             <div class="col-5">
-                <?php calculate_function($x, $encounting, $step, $type);
-
-
-                ?>
+                <?php calculate_function($x, $encounting, $step, $type); ?>
+                
+                <h6 class="mt-5">Максимальное значение функции: <?= $max_f ?></h6>
+                <h6>Минимальное значение функции: <?= $min_f ?></h6>
+                <h6>Среднее арифметическое значение функции: <?= round($mid_f, 3) ?></h6>
 
             </div>
         </div>

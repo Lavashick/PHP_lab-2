@@ -9,7 +9,14 @@ $encounting = isset($_GET['encounting']) ? (int)$_GET['encounting'] : $start_enc
 $step = isset($_GET['step']) ? (int)$_GET['step'] : $start_step;
 $type = isset($_GET['type']) ? $_GET['type'] : $start_type;
 
+$max_f = 0;
+$min_f = 0;
+$mid_f = 0;
+
 function calculate_function ($x, $encounting, $step, $type) {
+    global $max_f;
+    global $min_f;
+    global $mid_f;
     $arr_res = [];
     $arr_x = [];
     for ($i = 0; $i < $encounting; $i++) {
@@ -25,7 +32,7 @@ function calculate_function ($x, $encounting, $step, $type) {
             $arr_res[] = $f;
         } else {
             if ($x == 25) {
-                $f = 'error';
+                $f = null;
                 $arr_res[] = $f;
             }
             else {
@@ -36,12 +43,36 @@ function calculate_function ($x, $encounting, $step, $type) {
         $x += $step;
     }
 
+    // Округление до 3 знаков после запятой
+    for ($i = 0; $i < $encounting; $i++) {
+        if ($arr_res[$i] != null) {
+            $arr_res[$i] = round($arr_res[$i], 3);
+        }
+    }
+
+    $max_f = max($arr_res);
+    $min_f = min($arr_res);
+    $k_err = false;
+    for ($i = 0; $i < $encounting; $i++) {
+        if ($arr_x[$i] == 25) {
+            $k_err = true;
+        }
+    }
+    if ($k_err) {
+        $mid_f = array_sum($arr_res) / (count($arr_res) - 1);
+        echo $k_err;
+    } else {
+        $mid_f = array_sum($arr_res) / count($arr_res);
+    }
+
+    // Вывод по типу A, B, C, D, E
     switch ($type) {
         case 'A':
             for ($i = 0; $i < $encounting; $i++) {
                 echo 'f(' . $arr_x[$i] . ') = ' . $arr_res[$i] . "<br>";
             }
             break;
+
         case 'B':
             echo "<ul>";
             for ($i = 0; $i < $encounting; $i++) {
@@ -49,6 +80,7 @@ function calculate_function ($x, $encounting, $step, $type) {
             }
             echo "</ul>";
             break;
+
         case 'C':
             echo "<ol>";
             for ($i = 0; $i < $encounting; $i++) {
@@ -56,6 +88,7 @@ function calculate_function ($x, $encounting, $step, $type) {
             }
             echo "</ol>";
             break;
+
         case 'D':
             echo "<table>";
             echo "<tr> <th>№</th> <th>x</th> <th>f(x)</th> </tr>";
@@ -66,6 +99,7 @@ function calculate_function ($x, $encounting, $step, $type) {
             }
             echo "</table>";
             break;
+
         case 'E':
 
             break;
