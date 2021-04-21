@@ -50,10 +50,21 @@ function calculate_function ($x, $encounting, $step, $type) {
             echo "</ul>";
             break;
         case 'C':
-
+            echo "<ol>";
+            for ($i = 0; $i < $encounting; $i++) {
+                echo '<li>' . 'f(' . $arr_x[$i] . ') = ' . $arr_res[$i] . "</li>";
+            }
+            echo "</ol>";
             break;
         case 'D':
-
+            echo "<table>";
+            echo "<tr> <th>№</th> <th>x</th> <th>f(x)</th> </tr>";
+            for ($i = 1; $i < $encounting + 1; $i++) {
+                echo "<tr>";
+                    echo "<td>" . $i . "</td>" . "<td>" . $arr_x[$i - 1] . "</td>" . "<td>" . $arr_res[$i - 1] . "</td>";
+                echo "</tr>";
+            }
+            echo "</table>";
             break;
         case 'E':
 
