@@ -1,4 +1,4 @@
-<footer>
+<footer class="footer mt-auto py-2 mt-2">
     <nav class="navbar">
         <div class="container-fluid">
 

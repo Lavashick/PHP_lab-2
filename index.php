@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-100">
 
 <head>
     <title>Сметанина, 201-321, lab_2</title>
@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="d-flex flex-column h-100">
     <?php include("header.php") ?>
 
-    <main class="mt-5">
+    <main class="main-class">
         <?php include("main.php") ?>
 
         <div class="row justify-content-around">
@@ -51,16 +51,16 @@
                     <input class="btn btn-secondary" type="submit" value="Пересобрать">
 
                 </form>
-
+                
 
 
             </div>
-            <div class="col-5">
+            <div class="col-5 right">
                 <?php calculate_function($x, $encounting, $step, $type); ?>
-                
                 <h6 class="mt-5">Максимальное значение функции: <?= $max_f ?></h6>
                 <h6>Минимальное значение функции: <?= $min_f ?></h6>
                 <h6>Среднее арифметическое значение функции: <?= round($mid_f, 3) ?></h6>
+                
 
             </div>
         </div>

@@ -9,14 +9,21 @@ body {
     background-color: rgb(227, 227, 227);
 }
 
+header {
+    height: 110px;
+}
+
+.main-class {
+    margin-top: 140px;
+}
+
 .signature {
     text-align: right;
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    height: 80px;
 }
 
 table {
@@ -32,4 +39,15 @@ td {
     border: 1px solid black;
     padding: 5px;
     text-align: center;
+}
+
+.red {
+    border: 2px solid red;
+    margin: 4px;
+    display: inline-block;
+    text-align: center;
+}
+
+.right {
+    margin-bottom: 120px;
 }

@@ -50,6 +50,7 @@ function calculate_function ($x, $encounting, $step, $type) {
         }
     }
 
+    // Вывод мин, макс и ср. знач.
     $max_f = max($arr_res);
     $min_f = min($arr_res);
     $k_err = false;
@@ -101,7 +102,9 @@ function calculate_function ($x, $encounting, $step, $type) {
             break;
 
         case 'E':
-
+            for ($i = 0; $i < $encounting; $i++) {
+                echo '<div class="red">' . 'f(' . $arr_x[$i] . ') = ' . $arr_res[$i] . "</div>";
+            }
             break;
 
     }

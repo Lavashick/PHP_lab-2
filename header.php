@@ -1,4 +1,4 @@
-<header>
+<header class="fixed-top">
     <nav class="navbar">
         <div class="container-fluid">
 
