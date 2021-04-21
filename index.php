@@ -15,7 +15,7 @@
 <body>
     <?php include("header.php") ?>
 
-    <main>
+    <main class="mt-5">
         <?php include("main.php") ?>
 
         <div class="row justify-content-around">
@@ -25,11 +25,11 @@
                     <div class="form-group">
                         <label for="type">Тип верстки</label>
                         <select class="form-control" name="type" id="type">
-                            <option>A</option>
-                            <option>B</option>
-                            <option>C</option>
-                            <option>D</option>
-                            <option>E</option>
+                            <option <?php if ($type == 'A') echo 'selected'; ?>>A</option>
+                            <option <?php if ($type == 'B') echo 'selected'; ?>>B</option>
+                            <option <?php if ($type == 'C') echo 'selected'; ?>>C</option>
+                            <option <?php if ($type == 'D') echo 'selected'; ?>>D</option>
+                            <option <?php if ($type == 'E') echo 'selected'; ?>>E</option>
                         </select>
                     </div>
 
@@ -56,12 +56,11 @@
 
             </div>
             <div class="col-5">
-                <?php calculate_function($x, $encounting, $step, $type); 
-                
-                
-                
+                <?php calculate_function($x, $encounting, $step, $type);
+
+
                 ?>
-                
+
             </div>
         </div>
 

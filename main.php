@@ -11,34 +11,57 @@ $type = isset($_GET['type']) ? $_GET['type'] : $start_type;
 
 function calculate_function ($x, $encounting, $step, $type) {
     $arr_res = [];
+    $arr_x = [];
+    for ($i = 0; $i < $encounting; $i++) {
+        $arr_x[$i] = $x + $step * $i;
+    }
     // Вычисление значений f(x)
-    for ($i = 0; $i < $encounting; $i++, $x += $step) {
-        if ($x <= 10)
+    for ($i = 0; $i < $encounting; $i++) {
+        if ($x <= 10) {
             $f = 10 * $x - 5;
-        else 
-            if ($x < 20)
+            $arr_res[] = $f;
+        } elseif ($x < 20) {
             $f = ($x + 3) * $x * $x;
-        else {
-            if ($x == 25)
+            $arr_res[] = $f;
+        } else {
+            if ($x == 25) {
                 $f = 'error';
-            else
+                $arr_res[] = $f;
+            }
+            else {
                 $f = (3 / ($x - 25)) + 2;
+                $arr_res[] = $f;
+            }
         }
+        $x += $step;
     }
 
-    if ($type == 'A') // если тип верстки А
-    {
-        echo 'f(' . $x . ')=' . $f; // выводим аргумент и значение функции
-        if ($i < $encounting - 1) // если это не последняя итерация цикла
-            echo '<br>'; // выводим знак перевода строки
-    } else 
-        if ($type == 'B') // если тип верстки В
-    {
-        // выводим данные как пункт списка
-        echo '<li>f(' . $x . ')=' . $f . '</li>';
+    switch ($type) {
+        case 'A':
+            for ($i = 0; $i < $encounting; $i++) {
+                echo 'f(' . $arr_x[$i] . ') = ' . $arr_res[$i] . "<br>";
+            }
+            break;
+        case 'B':
+            echo "<ul>";
+            for ($i = 0; $i < $encounting; $i++) {
+                echo '<li>' . 'f(' . $arr_x[$i] . ') = ' . $arr_res[$i] . "</li>";
+            }
+            echo "</ul>";
+            break;
+        case 'C':
+
+            break;
+        case 'D':
+
+            break;
+        case 'E':
+
+            break;
+
     }
-    if ($type == 'B') // если тип верстки В
-        echo '</ul>'; // закрываем тег списка
+
+   
 }
 
 
