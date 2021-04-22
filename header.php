@@ -1,4 +1,4 @@
-<header>
+<header class="fixed-top">
     <nav class="navbar">
         <div class="container-fluid">
 
@@ -9,7 +9,7 @@
             <form class="d-flex signature">
                 Сметанина Александра<br>
                 Группа: 201-321 <br>
-                Лабораторная: 2
+                Лабораторная: 3, вариант 1
             </form>
 
         </div>
