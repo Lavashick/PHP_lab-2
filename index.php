@@ -17,7 +17,40 @@
 
     <main class="main-class">
         <?php include("main.php") ?>
-
+        <main role="main" class="flex-shrink-0 mb-5">
+    <?php
+    if(!isset($STORE))
+        $STORE = '';
+    if(!isset($COUNT))
+        $COUNT = 0;
+    if(isset($_GET['count']))
+        $COUNT = $_GET['count'] + 1;
+    if(isset($_GET['store']))
+        $STORE = $_GET['store'];
+    if( isset($_GET['key']) )
+    {
+        if( $_GET['key'] == 'reset' )
+            $STORE = '';
+        else
+            $STORE .= $_GET['key'];
+    }
+    ?>
+    <div class="container">
+        <div class="calc mt-5">
+            <div class="result"><?php echo $STORE; ?></div>
+            <div class="numbers">
+                <?php
+                $i = 1;
+                do {
+                    echo '<a href="'.'?key='.$i.'&store='.$STORE.'&count='.$COUNT.'" class="number-btn">'.$i.'</a>';
+                    $i = ($i + 1) % 10;
+                } while ($i != 1);
+                ?>
+            </div>
+            <a <?php echo 'href="?key=reset&count='.$COUNT.'"' ?> class="reset-btn">СБРОС</a>
+        </div>
+    </div>
+</main>
         
            
 

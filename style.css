@@ -14,7 +14,71 @@ body {
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    height: 80px;
+}
+
+.calc {
+    display: grid;
+    grid-template-rows: 50px 50px 50px 50px;
+    width: 290px;
+    grid-gap: 10px;
+}
+
+.result {
+    border: 2px solid rgb(45, 35, 35);
+    grid-row: 1 / 2;
+    text-align: center;
+    line-height: 48px;
+    font-size: 1.2em;
+    background-color: white;
+}
+
+.numbers {
+    grid-row: 2 / 4;
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px;
+    grid-gap: 10px;
+}
+
+.number-btn {
+    background-color: #ececec;
+    border-radius: 10px;
+    border: 2px solid black;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 48px;
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+}
+
+.number-btn:hover {
+    color: black;
+    text-decoration: none;
+    transform: scale(1.02);
+}
+
+.reset-btn {
+    background-color: #ececec;
+    grid-row: 4 / 5;
+    text-align: center;
+    line-height: 48px;
+    border-radius: 10px;
+    border: 2px solid black;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
+
+.reset-btn:hover {
+    color: black;
+    text-decoration: none;
+    transform: scale(1.01);
+}
+
+.main-class {
+    margin-top: 120px;
 }
