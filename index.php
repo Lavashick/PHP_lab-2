@@ -12,17 +12,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="d-flex flex-column h-100">
     <?php include("header.php") ?>
 
     <main>
         <?php include("main.php") ?>
 
-        
-
-
-
-
+    
     </main>
 
 
