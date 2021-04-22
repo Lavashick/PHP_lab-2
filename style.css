@@ -26,7 +26,7 @@ footer {
 }
 
 .result {
-    border: 2px solid rgb(45, 35, 35);
+    border: 2px solid rgb(131, 120, 120);
     grid-row: 1 / 2;
     text-align: center;
     line-height: 48px;
@@ -45,7 +45,7 @@ footer {
 .number-btn {
     background-color: #ececec;
     border-radius: 10px;
-    border: 2px solid black;
+    border: 2px solid rgb(131, 120, 120);
     height: 50px;
     width: 50px;
     text-align: center;
@@ -67,7 +67,7 @@ footer {
     text-align: center;
     line-height: 48px;
     border-radius: 10px;
-    border: 2px solid black;
+    border: 2px solid rgb(131, 120, 120);
     font-size: 30px;
     color: black;
     cursor: pointer;

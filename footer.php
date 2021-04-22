@@ -7,7 +7,7 @@
             </a>
 
             <form class="d-flex signature">
-                
+                Количество кликов: <?= $COUNT ?>
             </form>
         </div>
     </nav>
