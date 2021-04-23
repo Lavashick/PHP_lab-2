@@ -20,17 +20,22 @@
 
         <div class="container">
             <?php
-            for ($i = 0; $i < count($tables); $i++) {
-                echo '<h2>Table №' . ($i + 1) . '</h2>';
-                //echo getTable($tables[$i], $columns_num);
-            }
+                for ($i = 0; $i < count($tables); $i++) {
+                    echo '<h2>Table №' . ($i + 1) . '</h2>';
+                    echo getTable($tables[$i], $columns_num);
+                }
             ?>
         </div>
+        
     </main>
 
-
+<footer>
 
     <?php include("footer.php") ?>
+</footer>
+
+
+    
 
 
 
