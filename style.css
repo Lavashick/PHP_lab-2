@@ -18,3 +18,23 @@ footer {
     bottom: 0;
     height: 80px;
 }
+
+.left-menu {
+    list-style: none;
+}
+
+.left-menu li {
+    margin-top: 20px;
+}
+
+.left-menu li a {
+    color: gray;
+}
+
+.left-menu li a.active {
+    color: black;
+}
+
+main {
+    margin-bottom: 120px;
+}

@@ -15,11 +15,43 @@
 <body>
     <?php include("header.php") ?>
 
-    <main>
-        <?php include("main.php") ?>
+    <main role="main" class="flex-shrink-0 mb-5">
 
-        
+        <div class="container-fluid row">
+            <?php
+            $start_multi = 2;
+            $end_multi = 9;
+            ?>
 
+            <?php include("main.php") ?>
+
+            <div class="col-3">
+                <?php
+                echo '<ul class="left-menu">';
+
+                createElement('Вся таблица умножения', null, !isset($_GET['content']));
+
+                for ($i = $start_multi; $i <= $end_multi; $i++) {
+                    $isActive = array_key_exists('content', $_GET) && $_GET['content'] == $i;
+                    createElement('Таблица умножения на ' . $i, $i, $isActive);
+                }
+
+                function createElement($title, $number, $isActive)
+                {
+                    echo '<li><a href="?';
+                    if ($number !== null)
+                        echo '&content=' . $number;
+                    if (isset($_GET['html_type']))
+                        echo '&html_type=' . $_GET['html_type'];
+                    echo '"';
+                    if ($isActive)
+                        echo ' class="active"';
+                    echo '"';
+                    echo '>' . $title . '</a></li>';
+                }
+                ?>
+            </div>
+        </div>
 
 
 
