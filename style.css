@@ -37,4 +37,9 @@ footer {
 
 main {
     margin-bottom: 120px;
+    margin-top: 120px;
+}
+
+.navbar {
+    color: black !important;
 }
