@@ -120,7 +120,6 @@ $html_type = $_GET['html_type'];
 
             function outStr($x, $y, $end)
             {
-                echo $x;
                 $res = ($x * $y <= $end) ? outNumAsLink($x * $y) : $x * $y;
                 return outNumAsLink($x) . ' x ' . outNumAsLink($y) . ' = ' . $res;
             }
