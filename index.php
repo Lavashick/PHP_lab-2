@@ -21,7 +21,7 @@
         <div class="row justify-content-around">
             <div class="col-9">
 
-                <form action="./">
+                <form action="/" method="post">
                     <div class="form-group row">
                         <label for="fio" class="col-sm-2 col-form-label">ФИО</label>
                         <div class="col-sm-10">
@@ -102,7 +102,7 @@
 
 
 
-                    <input class="btn btn-secondary mt-4" type="submit" value="Пересобрать">
+                    <input class="btn btn-secondary mt-4" type="submit" value="Проверить">
 
                 </form>
 

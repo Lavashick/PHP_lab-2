@@ -1,17 +1,17 @@
 <?php 
 
-$a = isset($_GET['num-a']) ? $_GET['num-a'] : RandNum();
-$b = isset($_GET['num-b']) ? $_GET['num-b'] : RandNum();
-$c = isset($_GET['num-c']) ? $_GET['num-c'] : RandNum();
+$a = isset($_POST['num-a']) ? $_POST['num-a'] : RandNum();
+$b = isset($_POST['num-b']) ? $_POST['num-b'] : RandNum();
+$c = isset($_POST['num-c']) ? $_POST['num-c'] : RandNum();
 
 function RandNum() {
-    return rand(0, 150);
+    return rand(0, 100);
 }
 
-$fio = isset($_GET['fio']);
-$goup_num = isset($GET['group-num']);
-$method = isset($_GET['method']);
-$otobr = isset($_GET['otobr']);
+$fio = isset($_POST['fio']);
+$goup_num = isset($_POST['group-num']);
+$method = isset($_POST['method']);
+$otobr = isset($_POST['otobr']);
 
 function Square($a, $b, $c) {
     $p = Perimeter($a, $b, $c) / 2;
