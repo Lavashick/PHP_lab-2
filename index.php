@@ -3,7 +3,7 @@
 
 <head>
     <title>Сметанина, 201-321, lab_6</title>
-    <!-- Required meta tags -->
+    <!-- requiredd meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -21,25 +21,25 @@
         <div class="row justify-content-around">
             <div class="col-9">
 
-                <form action="/" method="post">
+                <form action="second.php" method="post">
                     <div class="form-group row">
                         <label for="fio" class="col-sm-2 col-form-label">ФИО</label>
                         <div class="col-sm-10">
-                            <input name="fio" type="text" class="form-control" id="fio">
+                            <input name="fio" type="text" class="form-control" id="fio" required>
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label for="goup-num" class="col-sm-2 col-form-label">Номер группы</label>
                         <div class="col-sm-10">
-                            <input name="group-num" type="text" class="form-control" id="goup-num">
+                            <input name="group-num" type="text" class="form-control" id="goup-num" required>
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label for="about-me" class="col-sm-2 col-form-label">Немного о себе</label>
                         <div class="col-sm-10">
-                            <textarea type="text" class="form-control" id="about-me" rows="3"></textarea>
+                            <textarea name="about-me" type="text" class="form-control" id="about-me" rows="3"></textarea>
                         </div>
                     </div>
 
@@ -89,26 +89,26 @@
                     <div class="form-group row">
                         <label for="answer" class="col-sm-2 col-form-label">Ваш ответ</label>
                         <div class="col-sm-10">
-                            <input name="answer" type="number" class="form-control" id="answer">
+                            <input name="answer" type="number" class="form-control" id="answer" required>
                         </div>
                     </div>
 
                     <div class="form-row form-check">
-                        <input type="checkbox" name="checkemail" id="sendCheck" style="" onchange="changeSendCheck(event)">
+                        <input type="checkbox" name="checkemail" id="sendCheck" onchange="changeSendCheck(event)">
                         <label for="sendCheck">Отправить результат на email?</label>
                     </div>
 
                     <div class="form-group row" style="display: none;" id="email">
                         <label class="col-sm-2 col-form-label" for="email">Ваш email</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="email" value="">
+                            <input type="text" class="form-control" name="email">
                         </div>
                         
                     </div>
 
 
 
-                    <input class="btn btn-secondary mt-4" type="submit" value="Проверить">
+                    <input class="btn btn-secondary mt-4" style="color: white;" value="Проверить" type="submit">
 
                 </form>
 
