@@ -32,41 +32,41 @@
                     <div class="form-group row">
                         <label for="goup-num" class="col-sm-2 col-form-label">Номер группы</label>
                         <div class="col-sm-10">
-                            <input type="password" class="form-control" id="goup-num">
+                            <input type="text" class="form-control" id="goup-num"  required>
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="inputPassword" class="col-sm-2 col-form-label">Немного о себе</label>
+                        <label for="about-me" class="col-sm-2 col-form-label">Немного о себе</label>
                         <div class="col-sm-10">
-                            <textarea type="password" class="form-control" id="inputPassword" rows="3"></textarea>
+                            <textarea type="text" class="form-control" id="about-me" rows="3"></textarea>
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="inputPassword" class="col-sm-2 col-form-label">Значение A</label>
+                        <label for="num-a" class="col-sm-2 col-form-label">Значение A</label>
                         <div class="col-sm-10">
-                            <input type="password" class="form-control" id="inputPassword">
+                            <input type="number" class="form-control" id="num-a" required>
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="inputPassword" class="col-sm-2 col-form-label">Значение B</label>
+                        <label for="num-b" class="col-sm-2 col-form-label">Значение B</label>
                         <div class="col-sm-10">
-                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                            <input type="number" class="form-control" id="num-b" required>
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="inputPassword" class="col-sm-2 col-form-label">Значение C</label>
+                        <label for="num-c" class="col-sm-2 col-form-label">Значение C</label>
                         <div class="col-sm-10">
-                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                            <input type="number" class="form-control" id="num-c" required>
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label class="sel col-sm-2 col-form-label" for="exampleFormControlSelect1">Метод вычисления</label>
-                        <select class="form-control col-sm-7" id="exampleFormControlSelect1">
+                        <label class="sel col-sm-2 col-form-label" for="method">Метод вычисления</label>
+                        <select class="form-control col-sm-7" id="method">
                             <option>Площадь треугольника</option>
                             <option>Периметр треугольника</option>
                             <option>Среднее арифметическое</option>
@@ -79,16 +79,23 @@
 
 
                     <div class="form-group row">
-                        <label class="sel col-sm-2 col-form-label" for="exampleFormControlSelect1">Отображение</label>
-                        <select class="form-control col-sm-7" id="exampleFormControlSelect1">
+                        <label class="sel col-sm-2 col-form-label" for="otobr">Отображение</label>
+                        <select class="form-control col-sm-7" id="otobr">
                             <option>Версия для просмотра в браузере</option>
                             <option>Версия для печати</option>
                         </select>
                     </div>
 
+                    <div class="form-group row">
+                        <label for="answer" class="col-sm-2 col-form-label">Ваш ответ</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="answer" required>
+                        </div>
+                    </div>
+
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">
+                        <input class="form-check-input" type="checkbox" value="" id="mail">
+                        <label class="form-check-label" for="mail">
                             Отправить результат по e-mail
                         </label>
                     </div>
@@ -105,7 +112,7 @@
         </div>
 
 
-
+        <?php include("main.php") ?>
     </main>
 
 
