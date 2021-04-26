@@ -10,14 +10,18 @@ function RandNum() {
 
 $fio = isset($_POST['fio']);
 $goup_num = isset($_POST['group-num']);
-$method = isset($_POST['method']);
+$method = $_POST['method'];
 $otobr = isset($_POST['otobr']);
+
+foreach ($_POST as $key => $value) {
+    echo $key.' = '.$value.'<br>';
+}
 
 function Square($a, $b, $c) {
     $p = Perimeter($a, $b, $c) / 2;
     $res = sqrt($p * ($p - $a) * ($p - $b) * ($p - $c));
     if (is_nan($res)) {
-        return "Такого треугольника не существует";
+        return "такого треугольника не существует";
     } else {
         return round($res, 2);
     }
@@ -44,12 +48,29 @@ function Maximum($a, $b, $c) {
     return max($a, $b, $c);
 }
 
-echo "a = " . $a . "; b = " . $b . "; c = " . $c . "<br><br>";
-echo "Square = " . Square($a, $b, $c) . "<br>";
-echo "Perimeter = " . Perimeter($a, $b, $c) . "<br>";
-echo "Arithmetic = " . Arithmetic($a, $b, $c) . "<br>";
-echo "Multiplication = " . Multiplication($a, $b, $c) . "<br>";
-echo "Minimum = " . Minimum($a, $b, $c) . "<br>";
-echo "Maximum = " . Maximum($a, $b, $c) . "<br>";
+function ResultOfSelectionMethod($a, $b, $c, $method) {
+    switch ($method) {
+        case 'Площадь треугольника':
+            return "Площадь треугольника: " . Square($a, $b, $c);
+        case 'Периметр треугольника':
+            if (!is_nan(Square($a, $b, $c))) {
+                return "Периметр треугольника: " . Perimeter($a, $b, $c);
+            } else {
+                return "такого треугольника не существует";
+            }
+        case 'Среднее арифметическое':
+            return "Среднее арифметическое: " . Arithmetic($a, $b, $c);
+        case 'Найти минимум':
+            return "Минимальное число: " . Minimum($a, $b, $c);
+        case 'Найти максимум':
+            return "Максимальное число: " . Maximum($a, $b, $c);
+        case 'Произведение чисел':
+            return "Произведение чисел: " . Multiplication($a, $b, $c);
+    }
+}
+
+echo "<br><br><br><br><h1>". ResultOfSelectionMethod($a, $b, $c, $method) . "</h1><br><br><br><br>"
+
+
 
 ?>

@@ -69,7 +69,7 @@
                         <select name="method" class="form-control col-sm-7" id="method">
                             <option>Площадь треугольника</option>
                             <option>Периметр треугольника</option>
-                            <option>Среднее арифметическое</option>
+                            <option >Среднее арифметическое</option>
                             <option>Найти минимум</option>
                             <option>Найти максимум</option>
                             <option>Произведение чисел</option>
