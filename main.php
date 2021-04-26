@@ -11,26 +11,4 @@ function RandNum() {
 $fio = $_GET['fio'];
 $group_num = $_GET['group-num'];
 
-foreach ($_POST as $key => $value) {
-    echo $key.' = '.$value.'<br>';
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>
