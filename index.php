@@ -25,14 +25,14 @@
                     <div class="form-group row">
                         <label for="fio" class="col-sm-2 col-form-label">ФИО</label>
                         <div class="col-sm-10">
-                            <input name="fio" type="text" class="form-control" id="fio" required>
+                            <input name="fio" type="text" class="form-control" id="fio" value="<?= $fio ?>" required>
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="goup-num" class="col-sm-2 col-form-label">Номер группы</label>
+                        <label for="group-num" class="col-sm-2 col-form-label">Номер группы</label>
                         <div class="col-sm-10">
-                            <input name="group-num" type="text" class="form-control" id="goup-num" required>
+                            <input name="group-num" type="text" class="form-control" id="group-num" value="<?= $group_num ?>" required>
                         </div>
                     </div>
 

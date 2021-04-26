@@ -27,3 +27,15 @@ select {
     width: 100%;
 }
 
+.main-form input[readonly] {
+    color: inherit;
+    background: transparent;
+    touch-action: none;
+    outline: none;
+    appearance: none;
+    width: 50%;
+    opacity: 1;
+    border: none;
+    padding-top: 7px;
+}
+
