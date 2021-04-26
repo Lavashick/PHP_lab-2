@@ -19,45 +19,83 @@
         <?php include("main.php") ?>
 
         <div class="row justify-content-around">
-            <div class="col-7">
+            <div class="col-9">
 
                 <form action="./">
                     <div class="form-group row">
-                        <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                        <label for="fio" class="col-sm-2 col-form-label">ФИО</label>
                         <div class="col-sm-10">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+                            <input type="text" class="form-control" id="fio" required>
                         </div>
                     </div>
-                    
+
                     <div class="form-group row">
-                        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                        <label for="goup-num" class="col-sm-2 col-form-label">Номер группы</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="goup-num">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Немного о себе</label>
+                        <div class="col-sm-10">
+                            <textarea type="password" class="form-control" id="inputPassword" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Значение A</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Значение B</label>
                         <div class="col-sm-10">
                             <input type="password" class="form-control" id="inputPassword" placeholder="Password">
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Значение C</label>
                         <div class="col-sm-10">
                             <input type="password" class="form-control" id="inputPassword" placeholder="Password">
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-                        <div class="col-sm-10">
-                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                        </div>
+                        <label class="sel col-sm-2 col-form-label" for="exampleFormControlSelect1">Метод вычисления</label>
+                        <select class="form-control col-sm-7" id="exampleFormControlSelect1">
+                            <option>Площадь треугольника</option>
+                            <option>Периметр треугольника</option>
+                            <option>Среднее арифметическое</option>
+                            <option>Найти минимум</option>
+                            <option>Найти максимум</option>
+                            <option>Произведение чисел</option>
+                        </select>
                     </div>
+
+
 
                     <div class="form-group row">
-                        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-                        <div class="col-sm-10">
-                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                        </div>
+                        <label class="sel col-sm-2 col-form-label" for="exampleFormControlSelect1">Отображение</label>
+                        <select class="form-control col-sm-7" id="exampleFormControlSelect1">
+                            <option>Версия для просмотра в браузере</option>
+                            <option>Версия для печати</option>
+                        </select>
                     </div>
 
-                    <input class="btn btn-secondary" type="submit" value="Пересобрать">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Отправить результат по e-mail
+                        </label>
+                    </div>
+
+
+
+                    <input class="btn btn-secondary mt-4" type="submit" value="Пересобрать">
 
                 </form>
 
