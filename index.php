@@ -25,14 +25,14 @@
                     <div class="form-group row">
                         <label for="fio" class="col-sm-2 col-form-label">ФИО</label>
                         <div class="col-sm-10">
-                            <input name="fio" type="text" class="form-control" id="fio" required>
+                            <input name="fio" type="text" class="form-control" id="fio" >
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label for="goup-num" class="col-sm-2 col-form-label">Номер группы</label>
                         <div class="col-sm-10">
-                            <input name="group-num" type="text" class="form-control" id="goup-num" required>
+                            <input name="group-num" type="text" class="form-control" id="goup-num" >
                         </div>
                     </div>
 
@@ -46,21 +46,21 @@
                     <div class="form-group row">
                         <label for="num-a" class="col-sm-2 col-form-label">Значение A</label>
                         <div class="col-sm-10">
-                            <input name="num-a" type="number" class="form-control" id="num-a" value="<?php RandNum() ?>">
+                            <input name="num-a" type="number" class="form-control" id="num-a" value="<?= $a ?>">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label for="num-b" class="col-sm-2 col-form-label">Значение B</label>
                         <div class="col-sm-10">
-                            <input name="num-b" type="number" class="form-control" id="num-b" value="<?php RandNum() ?>">
+                            <input name="num-b" type="number" class="form-control" id="num-b" value="<?= $b ?>">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label for="num-c" class="col-sm-2 col-form-label">Значение C</label>
                         <div class="col-sm-10">
-                            <input name="num-c" type="number" class="form-control" id="num-c" value="<?php RandNum() ?>">
+                            <input name="num-c" type="number" class="form-control" id="num-c" value="<?= $c ?>">
                         </div>
                     </div>
 
@@ -89,7 +89,7 @@
                     <div class="form-group row">
                         <label for="answer" class="col-sm-2 col-form-label">Ваш ответ</label>
                         <div class="col-sm-10">
-                            <input name="" type="number" class="form-control" id="answer" required>
+                            <input name="" type="number" class="form-control" id="answer" >
                         </div>
                     </div>
 
