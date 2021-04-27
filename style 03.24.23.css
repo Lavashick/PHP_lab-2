@@ -1,0 +1,23 @@
+.main-menu {
+    color: white;
+    background-color: #8e8988 !important;
+}
+
+
+.footer {
+    position: sticky;
+    background-color: darkgray;
+    bottom: 0;
+}
+
+main > .container {
+    padding: 60px 15px 0;
+}
+
+.text-muted {
+    color: lightgray !important;
+}
+
+.img-pass {
+    height: 150px;
+}
