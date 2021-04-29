@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Сметанина, 201-321, lab_2</title>
+    <title>Сметанина, 201-321, lab_7</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,54 +18,54 @@
     <main>
         <?php include("main.php") ?>
 
-        <div class="row justify-content-around">
-            <div class="col-5">
+        <div class="container d-flex justify-content-center">
+        <?php
+        $algorithms = [
+            'choice' => 'Сортировка выбором',
+            'bubble' => 'Пузырьковый алгоритм',
+            'shaker' => 'Шейкерная сортировка',
+            'insert' => 'Сортировка вставками',
+            'gnome' => 'Алгоритм садового гнома',
+            'shells' => 'Алгоритм Шелла',
+            'quick' => 'Быстрая сортировка'
+        ];
+        ?>
+        
+        <form target="_blank" action="sort.php" class="col-9 mt-3 needs-validation" method="post" novalidate>
 
-                <form action="./">
-                    <div class="form-group">
-                        <label for="type">Тип верстки</label>
-                        <select class="form-control" name="type" id="type">
-                            <option>A</option>
-                            <option>B</option>
-                            <option>C</option>
-                            <option>D</option>
-                            <option>E</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="x">Минимальный X</label>
-                        <input type="number" name="x" class="form-control" id="x" placeholder="<?= $start_x ?>" value="<?= $x ?>">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="step">Шаг</label>
-                        <input type="number" class="form-control" name="step" id="step" placeholder="<?= $start_step ?>" value="<?= $step ?>">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="encounting">Количество значений</label>
-                        <input type="number" class="form-control" name="encounting" id="encounting" placeholder="<?= $start_encounting ?>" value="<?= $encounting ?>">
-                    </div>
-
-                    <input class="btn btn-secondary" type="submit" value="Пересобрать">
-
-                </form>
-
-
-
+            <div class="form-group clearfix">
+                <input type="button" class="col-5 btn btn-primary add-element-btn mr-3 float-left" value="Добавить элемент">
+                <input type="button" class="col-5 btn btn-danger remove-element-btn float-right" value="Удалить элемент">
             </div>
-            <div class="col-5">
-                <?php calculate_function($x, $encounting, $step, $type); 
-                
-                
-                
-                ?>
-                
+
+            <div class="form-group row elements-group">
+                <input type="hidden" name="array-length" value="1">
+                <div class="col-6 row">
+                    <label for="element-0" class="col-sm-2 col-form-label">1: </label>
+                    <input type="text" class="col-sm form-control" id="element-0" placeholder="a[0]" name="element-0" required>
+                </div>
             </div>
+
+            <div class="form-group row col-sm">
+                <label for="function" class="col-sm-3 col-form-label">Алгоритм</label>
+                <select class="col-sm form-control" id="function" name="func">';
+                    <?php
+                    foreach ($algorithms as $key => $title) {
+                        echo '<option value="' . $key . '">' . $title . '</option>';
+                    }
+                    ?>
+                </select>
+            </div>
+
+            <div class="form-group mt-4 row col-sm">
+                <button type="submit" class="btn btn-secondary col-sm ml-4">Сортировать массив</button>
+            </div>
+
+        </form>
+        
+        <script src="script.js"></script>
         </div>
-
-
+       
 
 
     </main>
