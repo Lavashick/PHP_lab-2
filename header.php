@@ -5,7 +5,8 @@
             <a class="navbar-brand" href="#">
                 <img src="img/logo.png" alt="" height=80 class="d-inline-block align-text-top">
             </a>
-            <a class="navbar" href="/?html_type=TABLE<?php if (isset($content)) echo '&content=' . $content ?>">
+            <a class="navbar" href="/?html_type=TABLE<?php if (isset($content)) echo '&content=' . $content; 
+            if ($_GET["html_type"]) ?>">
                 Табличная верстка
             </a>
 
