@@ -3,7 +3,6 @@
 
 <head>
     <title>Сметанина, 201-321, lab_5</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -45,10 +44,11 @@ $html_type = $_GET['html_type'];
                 {
                     global $html_type;
                     echo '<li><a href="?';
-                    if ($number !== null)
-                        echo '&content=' . $number;
                     if (isset($html_type))
                         echo '&html_type=' . $html_type;
+
+                    if ($number !== null)
+                        echo '&content=' . $number;
                     echo '"';
                     if ($isActive)
                         echo ' class="active"';

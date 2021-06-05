@@ -43,3 +43,13 @@ main {
 .navbar {
     color: black !important;
 }
+
+.link {
+    color: black;
+    font-weight: normal;
+}
+
+.link-bold {
+    color: white;
+    font-weight: bold;
+}

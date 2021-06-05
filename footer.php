@@ -9,8 +9,13 @@
             <form class="d-flex signature">
                 Тип верстки: <?php if ($_GET['html_type'] == "DIV") {
                     echo "div'ами";
-                } else {
+                } 
+                else if ($_GET['html_type'] == "TABLE") {
                     echo "таблица";
+                }
+                
+                else {
+                    echo 'не выбрано';
                 } ?>
             </form>
         </div>
