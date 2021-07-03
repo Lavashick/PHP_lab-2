@@ -27,7 +27,7 @@ include "algorithms.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><?php include 'modules/title.php'; ?></title>
+    <title><Lab_7></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
@@ -37,7 +37,7 @@ include "algorithms.php";
 </head>
 <body class="d-flex flex-column h-100">
 
-<?php include 'modules/header.php'; ?>
+<?php include 'header.php'; ?>
 
 <main role="main" class="flex-shrink-0 mb-5">
     <div class="container mt-4">
@@ -90,7 +90,7 @@ include "algorithms.php";
     </div>
 </main>
 
-<?php include 'modules/footer.php'; ?>
+<?php include 'footer.php'; ?>
 
 </body>
 </html>
