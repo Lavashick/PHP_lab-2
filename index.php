@@ -15,55 +15,21 @@
 <body>
     <?php include("header.php") ?>
 
-    <main>
-        <?php include("main.php") ?>
-
-        <div class="row justify-content-around">
-            <div class="col-5">
-
-                <form action="./">
-                    <div class="form-group">
-                        <label for="type">Тип верстки</label>
-                        <select class="form-control" name="type" id="type">
-                            <option>A</option>
-                            <option>B</option>
-                            <option>C</option>
-                            <option>D</option>
-                            <option>E</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="x">Минимальный X</label>
-                        <input type="number" name="x" class="form-control" id="x" placeholder="<?= $start_x ?>" value="<?= $x ?>">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="step">Шаг</label>
-                        <input type="number" class="form-control" name="step" id="step" placeholder="<?= $start_step ?>" value="<?= $step ?>">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="encounting">Количество значений</label>
-                        <input type="number" class="form-control" name="encounting" id="encounting" placeholder="<?= $start_encounting ?>" value="<?= $encounting ?>">
-                    </div>
-
-                    <input class="btn btn-secondary" type="submit" value="Пересобрать">
-
-                </form>
-
-
-
+    <main role="main" class="flex-shrink-0 mb-5">
+    <div class="container">
+        <form target="_blank" action="result.php" class="col-6 mt-3 needs-validation" method="post" novalidate>
+            <div class="form-group">
+                <label for="data" class="col-sm-4 col-form-label">Текст для анализа</label>
+                <textarea class="col-sm form-control" id="data" rows="3" name="data"></textarea>
             </div>
-            <div class="col-5">
-                <?php calculate_function($x, $encounting, $step, $type); 
-                
-                
-                
-                ?>
-                
+
+            <div class="form-group row col-sm">
+                <button type="submit" class="btn btn-primary col-sm ml-4">Анализировать</button>
             </div>
-        </div>
+        </form>
+    </div>
+
+       
 
 
 
