@@ -39,7 +39,7 @@
                 <input type="hidden" name="array-length" value="1">
                 <div class="col-6 row">
                     <label for="element-0" class="col-sm-2 col-form-label">1: </label>
-                    <input type="text" class="col-sm form-control" id="element-0" placeholder="a[0]" name="element-0" required>
+                    <input type="text" class="mt-1 col-sm form-control" id="element-0" placeholder="a[0]" name="element-0" required>
                 </div>
             </div>
 

@@ -8,7 +8,7 @@
         let count = length_input.val();
         let newElement = '<div class="col-6 row">' +
             '<label for="element-' + count + '" class="col-sm-2 col-form-label">' + (parseInt(count) + 1) + ': </label>' +
-            '<input type="text" class="col-sm form-control" id="element-' + count + '" placeholder="a[' + count + ']" name="element-'+count+'" required>' +
+            '<input type="text" class="mt-1 col-sm form-control" id="element-' + count + '" placeholder="a[' + count + ']" name="element-'+count+'" required>' +
             '</div>';
         let group = $('.elements-group');
         $(group).append(newElement);
