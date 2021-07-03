@@ -5,8 +5,16 @@ footer {
     background-color: #8e8988;
 }
 
+.text-muted {
+    color: lightgray !important;
+}
+
 body {
     background-color: rgb(227, 227, 227);
+}
+
+main {
+    margin-bottom: 300px;
 }
 
 .signature {
@@ -17,4 +25,9 @@ footer {
     position: absolute;
     bottom: 0;
     height: 80px;
+    margin-bottom: -25px;
+}
+
+th {
+    background-color:  #8e8988;
 }
