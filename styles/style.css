@@ -1,3 +1,7 @@
+.pagination .page-link:hover {
+    border: 2px solid blue;
+}
+
 header,
 footer {
     margin: 0;
@@ -17,4 +21,8 @@ footer {
     position: absolute;
     bottom: 0;
     height: 80px;
+}
+
+thead {
+    background-color: #8e8988;
 }

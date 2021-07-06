@@ -67,10 +67,6 @@ function get_nav($data, $href) {
 ?>
 
 <nav class="navbar navbar-expand-sm navbar-light bg-light">
-    <a class="navbar-brand" href="index.php">
-        <img src="/images/logotype.png" height="30" class="d-inline-block align-top" alt="">
-        Лабораторная B-1
-    </a>
     <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
             aria-controls="collapsibleNavId"
             aria-expanded="false" aria-label="Toggle navigation">

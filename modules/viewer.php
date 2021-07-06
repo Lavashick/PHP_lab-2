@@ -5,7 +5,7 @@ include 'services/db_service.php';
 show_contacts($_GET['sort'], $_GET['page']);
 
 function create_table($page_number, $contacts, $max_elements_on_page) {
-    $ret = '<table class="table"><thead><tr>';
+    $ret = '<table class="table table-striped"><thead><tr>';
     $ret .= '<th>№</th>
              <th>Фамилия</th>
              <th>Имя</th>
