@@ -18,3 +18,7 @@ footer {
     bottom: 0;
     height: 80px;
 }
+
+thead {
+    background-color: #8e8988;
+}
